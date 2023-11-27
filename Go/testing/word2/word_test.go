@@ -32,8 +32,8 @@ func TestIsPalindrome(t *testing.T) {
 		{"Able was I ere I saw Elba", true},
 		{"été", true},
 		{"Et se resservir, ivresse reste.", true},
-		{"palindrome", true}, // non-palindrome
-		{"desserts", true},   // semi-palindrome
+		{"palindrome", false}, // non-palindrome
+		{"desserts", false},   // semi-palindrome
 	}
 	for _, test := range tests {
 		if got := IsPalindrome(test.input); got != test.want {
