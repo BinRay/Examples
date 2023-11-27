@@ -17,10 +17,9 @@ func demoFunc() {
 func main() {
 	defer ants.Release()
 
-	runTimes := 100000
+	pool, _ := NewTaskPool(10)
 
-	// Use the customized limited pool.
-	p, _ := ants.NewPool(10)
+	runTimes := 1000000
 
 	var wg sync.WaitGroup
 	syncCalculateSum := func() {
@@ -29,12 +28,11 @@ func main() {
 	}
 	for i := 0; i < runTimes; i++ {
 		wg.Add(1)
-		_ = p.Submit(syncCalculateSum)
+		pool.Submit(syncCalculateSum)
 	}
-	// it will be blocked until all tasks are finished and submitted.
 	fmt.Println("all tasks have been submitted.")
 	wg.Wait()
-	fmt.Printf("running goroutines: %d\n", p.Running())
+	fmt.Printf("running goroutines: %d\n", ants.Running())
 	fmt.Printf("finish all tasks.\n")
 
 }
