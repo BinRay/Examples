@@ -1,0 +1,22 @@
+[Unit]
+Description=a simple svr
+After=network.target
+
+[Service]
+LimitNPROC=infinity
+LimitCORE=infinity
+LimitNOFILE=102000
+LimitMEMLOCK=infinity
+Type=simple
+User=root
+Group=root
+
+WorkingDirectory=/data/codes/svr/app
+ExecStart=/data/codes/svr/app/appname
+Restart=on-failure
+KillSignal=SIGTERM
+KillMode=control-group
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
