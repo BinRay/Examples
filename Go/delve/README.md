@@ -21,3 +21,9 @@ dlv debug --headless --listen=:2345 --api-version=2 --accept-multiclient // star
 # Remote debug command on vm, so that you can debug on your local Goland IDE with go remote debug configuration.
 dlv debug --headless --listen=:2345 --api-version=2 --accept-multiclient ./cmd -- -c ./conf/app_binliu.yaml
 ```
+
+## dlv test command
+```bash
+dlv test -- -test.run TestAAA -test.v
+dlv test --headless --listen=:2345 --api-version=2 --accept-multiclient AAA_test.go -test.v // remote debug test
+```
