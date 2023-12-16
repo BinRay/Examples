@@ -10,7 +10,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v0.3.1 // indirect
-	github.com/agiledragon/gomonkey/v2 v2.2.0 // indirect
+	github.com/agiledragon/gomonkey v2.0.2+incompatible // indirect
 	github.com/gopherjs/gopherjs v1.17.2 // indirect
 	github.com/jtolds/gls v4.20.0+incompatible // indirect
 	github.com/smarty/assertions v1.15.0 // indirect
