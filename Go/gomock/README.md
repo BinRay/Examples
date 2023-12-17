@@ -1,0 +1,1 @@
+mockgen -source=foo.go -destination=foo_mock.go -package=main

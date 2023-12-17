@@ -1,4 +1,4 @@
-yum install git
+ssyum install git
 
 move the private key file `rd_rsa` to the directory `~/.ssh/`  
 `ssh -T git@github.com` // test connection
