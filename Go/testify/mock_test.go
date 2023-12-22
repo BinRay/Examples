@@ -52,7 +52,7 @@ func TestSomething(t *testing.T) {
 }
 
 func targetFuncThatDoesSomethingWithObj(obj *MyMockedObject) {
-
+	obj.DoSomething(12)
 }
 
 // TestSomethingWithPlaceholder is a second example of how to use our test object to
